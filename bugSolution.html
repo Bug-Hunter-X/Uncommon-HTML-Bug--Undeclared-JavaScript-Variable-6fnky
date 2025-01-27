@@ -1,0 +1,6 @@
+<p>To fix this bug, you need to declare and initialize the JavaScript variable before using it.  Here's how you can do it:</p><pre><code class="language-javascript">let myVar = "Hello, World!";
+document.getElementById("myElement").innerHTML = myVar;</code></pre><p>This code first declares a variable named `myVar` and assigns it a string value. Then it uses the variable within the code to set the innerHTML property of an HTML element with the id="myElement".</p><p>Another method would be to ensure the script is placed after the element it uses to avoid this issue: </p><pre><code class="language-html">&lt;p id="myElement">&lt;/p&gt;
+&lt;script&gt;
+let myVar = "Hello, World!";
+document.getElementById("myElement").innerHTML = myVar;
+&lt;/script&gt;</code></pre>
